@@ -1,0 +1,25 @@
+.search-bar-container {
+  margin: 10px 50px;
+}
+
+.search-bar-container label {
+  margin-right: 10px;
+}
+
+.movies-list ul {
+  list-style: none;
+}
+
+.movies-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin: 5px;
+  padding: 5px;
+}
+
+.movie-card {
+  margin: 10px 20px;
+}
