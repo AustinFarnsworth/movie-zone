@@ -41,10 +41,23 @@ function SearchBar() {
 
       <div className="movies-list">
         {movies.map((el) => {
+          if (el.poster_path === null) {
+            return (
+              <div className="movie-card">
+                <div key={el.id}>
+                  {/* <img src={imageURL + el.poster_path} alt={el.title} /> */}
+                  <h3>Image not available</h3>
+                  <p>{el.title}</p>
+                </div>
+              </div>
+            );
+          }
+
           return (
             <div className="movie-card">
               <div key={el.id}>
                 <img src={imageURL + el.poster_path} alt={el.title} />
+
                 <p>{el.title}</p>
               </div>
             </div>
