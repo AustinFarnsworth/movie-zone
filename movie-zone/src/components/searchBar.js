@@ -44,9 +44,8 @@ function SearchBar() {
           if (el.poster_path === null) {
             return (
               <div className="movie-card">
-                <div key={el.id}>
-                  {/* <img src={imageURL + el.poster_path} alt={el.title} /> */}
-                  <h3>Image not available</h3>
+                <div key={el.id} className="no-image">
+                  <i class="fa-solid fa-image-slash">- Image Not availabe -</i>
                   <p>{el.title}</p>
                 </div>
               </div>
@@ -65,7 +64,8 @@ function SearchBar() {
                 </div>
                 <div className="bottom-card-container">
                   <h3>{el.title}</h3>
-                  <p>{el.overview}</p>
+
+                  <p className="movie-overview">{el.overview}</p>
                 </div>
               </div>
             </div>

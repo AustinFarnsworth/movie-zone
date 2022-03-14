@@ -7,9 +7,9 @@ import SearchBar from "./components/searchBar";
 function App() {
   useEffect(() => {
     movieDatabase
-      .get("/movie/550")
+      .get("/movie/271110")
       .then((response) => {
-        // console.log(response.data);
+        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
