@@ -10,6 +10,10 @@
   list-style: none;
 }
 
+.label {
+  font-size: 28px;
+}
+
 .movies-list {
   display: flex;
   flex-direction: row;
@@ -20,6 +24,39 @@
   padding: 5px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  width: 30%;
+  padding: 5px;
+  margin-top: 8px;
+}
+
 .movie-card {
-  margin: 10px 20px;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 480px;
+  background: #fff;
+  /* padding: 3px; */
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgb(90, 89, 89);
+}
+
+.poster {
+  width: 100%;
+  height: 360px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 0 13px 13px;
+}
+
+.bottom-card-container {
+  padding: 5px;
+  color: #374151;
 }

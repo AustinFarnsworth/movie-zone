@@ -8,7 +8,7 @@ function SearchBar() {
   const [movies, setMovies] = useState([]);
   const [image, setImage] = useState([]);
 
-  const imageURL = "https://image.tmdb.org/t/p/w200";
+  const imageURL = "https://image.tmdb.org/t/p/w500";
 
   const onSearchTerm = (e) => {
     e.preventDefault();
@@ -29,7 +29,7 @@ function SearchBar() {
   return (
     <div className="search-bar-container">
       <form onSubmit={onSearchTerm}>
-        <label>Search Movie Titles here</label>
+        <label className="label">Search Your Favorite Movie Titles here</label>
         <input
           type="text"
           value={term}
@@ -56,9 +56,17 @@ function SearchBar() {
           return (
             <div className="movie-card">
               <div key={el.id}>
-                <img src={imageURL + el.poster_path} alt={el.title} />
-
-                <p>{el.title}</p>
+                <div className="top-card-container">
+                  <img
+                    src={imageURL + el.poster_path}
+                    alt={el.title}
+                    className="poster"
+                  />
+                </div>
+                <div className="bottom-card-container">
+                  <h3>{el.title}</h3>
+                  <p>{el.overview}</p>
+                </div>
               </div>
             </div>
           );

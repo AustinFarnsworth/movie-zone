@@ -6,8 +6,16 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #ebebeb;
+}
+
 h1,
 h2,
 h3 {
+  font-family: "Shadows Into Light", cursive;
+}
+
+label {
   font-family: "Shadows Into Light", cursive;
 }

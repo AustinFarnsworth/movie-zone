@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <HeaderBar />
-      <h3> The Movie Zone</h3>
+
       <SearchBar />
     </div>
   );
