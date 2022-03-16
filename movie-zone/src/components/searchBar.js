@@ -64,7 +64,7 @@ function SearchBar() {
                 </div>
                 <div className="bottom-card-container">
                   <h3>{el.title}</h3>
-
+                  <h5> - Movie Summary -</h5>
                   <p className="movie-overview">{el.overview}</p>
                 </div>
               </div>

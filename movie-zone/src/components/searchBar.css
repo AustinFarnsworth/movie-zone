@@ -80,6 +80,7 @@ form input {
   color: #374151;
 }
 
-.bottom-card-container h3 {
+.bottom-card-container h3,
+h5 {
   margin-bottom: 5px;
 }
