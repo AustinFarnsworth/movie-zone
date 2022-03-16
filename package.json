@@ -17,7 +17,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cd movie-zone && npm start",
+    "dev": "cd movie-zone && npm start",
     "build": "cd movie-zone && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
