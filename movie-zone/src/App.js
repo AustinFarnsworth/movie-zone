@@ -19,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <HeaderBar />
+      <h1>Development Branch</h1>
       <SearchBar />
     </div>
   );
