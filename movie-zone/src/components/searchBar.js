@@ -66,6 +66,7 @@ function SearchBar() {
                   <h3>{el.title}</h3>
                   <h5> - Movie Summary -</h5>
                   <p className="movie-overview">{el.overview}</p>
+                  <button className="more-button">More</button>
                 </div>
               </div>
             </div>

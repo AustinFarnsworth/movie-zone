@@ -83,3 +83,17 @@ form input {
 h5 {
   margin-bottom: 5px;
 }
+
+.more-button {
+  padding: 4px 10px;
+  border-radius: 20%;
+  border-style: none;
+  background-color: #4f5d75;
+  color: #edeef1;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  bottom: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}

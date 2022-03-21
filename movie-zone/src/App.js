@@ -1,8 +1,16 @@
 import "./App.css";
+import {render} from "react-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
 import HeaderBar from "./components/headerBar";
 import movieDatabase from "./api/movieDatabase";
 import {useEffect} from "react";
 import SearchBar from "./components/searchBar";
+import SingleMovie from "./pages/singleMove";
 
 function App() {
   useEffect(() => {
@@ -18,9 +26,14 @@ function App() {
 
   return (
     <div className="App">
-      <HeaderBar />
-      <h1>Development Branch</h1>
-      <SearchBar />
+      <BrowserRouter>
+        <HeaderBar />
+
+        <SearchBar />
+        <Routes>
+          <Route exact path="/movie" element={<SingleMovie />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
