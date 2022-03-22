@@ -1,0 +1,26 @@
+.single-movie-page {
+  padding: 5px;
+  margin: 0 50px;
+  text-align: center;
+  font-size: x-large;
+}
+
+.link-container {
+  margin-top: 20px;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  background: #395756;
+  padding: 10px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.link:hover {
+  color: #395756;
+  background-color: #fff;
+}
