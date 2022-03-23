@@ -1,13 +1,20 @@
 import "./App.css";
+<<<<<<< HEAD
 
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import HeaderBar from "./components/headerBar";
 
+=======
+import React from "react";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import HeaderBar from "./components/headerBar";
+>>>>>>> main
 import SearchBar from "./components/searchBar";
-import SingleMovie from "./pages/singleMove";
+import SingleMovie from "./pages/singleMovie";
 
 function App() {
   return (
+<<<<<<< HEAD
     <div className="App">
       <Router>
         <HeaderBar />
@@ -18,6 +25,18 @@ function App() {
         </Switch>
       </Router>
     </div>
+=======
+    <Router>
+      <div className="App">
+        <HeaderBar />
+
+        <Switch>
+          <Route exact path="/" component={SearchBar} />
+          <Route exact path="/singleMovie" component={SingleMovie} />
+        </Switch>
+      </div>
+    </Router>
+>>>>>>> main
   );
 }
 

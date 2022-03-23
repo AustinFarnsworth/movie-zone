@@ -2,6 +2,7 @@ import React from "react";
 import "./searchBar.css";
 import {useState} from "react";
 import movieDatabase from "../api/movieDatabase";
+import {useHistory} from "react-router";
 
 function SearchBar() {
   const [term, setTerm] = useState("");
@@ -9,6 +10,8 @@ function SearchBar() {
   const [image, setImage] = useState([]);
 
   const imageURL = "https://image.tmdb.org/t/p/w500";
+
+  const history = useHistory();
 
   const onSearchTerm = (e) => {
     e.preventDefault();
@@ -24,6 +27,10 @@ function SearchBar() {
         setImage(response.data.results.poster_path);
         console.log(response.data.results);
       });
+  };
+
+  const handleReadMore = async () => {
+    history.push("/singleMovie");
   };
 
   return (
@@ -66,7 +73,13 @@ function SearchBar() {
                   <h3>{el.title}</h3>
                   <h5> - Movie Summary -</h5>
                   <p className="movie-overview">{el.overview}</p>
-                  <button className="more-button">More</button>
+
+                  <button
+                    className="more-button"
+                    onClick={() => handleReadMore()}
+                  >
+                    More Info
+                  </button>
                 </div>
               </div>
             </div>

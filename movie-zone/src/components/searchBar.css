@@ -97,3 +97,7 @@ h5 {
   margin-right: 5px;
   margin-bottom: 5px;
 }
+
+.more-button:hover {
+  opacity: 0.8;
+}
