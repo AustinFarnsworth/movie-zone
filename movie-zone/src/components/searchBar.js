@@ -3,11 +3,14 @@ import "./searchBar.css";
 import {useState} from "react";
 import movieDatabase from "../api/movieDatabase";
 import {useHistory} from "react-router";
+import {useSelector} from "react-redux";
 
 function SearchBar() {
   const [term, setTerm] = useState("");
   const [movies, setMovies] = useState([]);
   const [image, setImage] = useState([]);
+
+  const id = useSelector((state) => state.checkMovieId);
 
   const imageURL = "https://image.tmdb.org/t/p/w500";
 
@@ -48,6 +51,7 @@ function SearchBar() {
           }}
         ></input>
       </form>
+      <p>{id}</p>
 
       <div className="movies-list">
         {movies.map((el) => {

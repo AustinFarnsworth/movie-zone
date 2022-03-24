@@ -6,6 +6,8 @@ import HeaderBar from "./components/headerBar";
 import SearchBar from "./components/searchBar";
 import SingleMovie from "./pages/singleMovie";
 
+// import {useSelector} from "react-redux";
+
 function App() {
   return (
     <Router>
