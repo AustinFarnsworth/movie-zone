@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import HeaderBar from "./components/headerBar";
 import SearchBar from "./components/searchBar";
 import SingleMovie from "./pages/singleMovie";
+import SingleMovie2 from "./pages/singleMovie2";
 
 // import {useSelector} from "react-redux";
 
@@ -13,11 +14,12 @@ function App() {
     <Router>
       <div className="App">
         <HeaderBar />
+        <SingleMovie2 />
 
-        <Switch>
+        {/* <Switch>
           <Route exact path="/" component={SearchBar} />
           <Route exact path="/singleMovie" component={SingleMovie} />
-        </Switch>
+        </Switch> */}
       </div>
     </Router>
   );

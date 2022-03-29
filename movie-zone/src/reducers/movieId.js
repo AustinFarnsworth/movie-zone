@@ -1,4 +1,4 @@
-const movieId = (state = "123", action) => {
+const movieId = (state = "", action) => {
   switch (action.type) {
     case "CHECK_MOVIE_ID":
       return state;
