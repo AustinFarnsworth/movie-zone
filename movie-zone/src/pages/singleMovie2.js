@@ -8,7 +8,7 @@ function SingleMovie2() {
   const [singleMovie, setSingleMovie] = useState([]);
   const [genre, setGenre] = useState([]);
 
-  const imageURL = "https://image.tmdb.org/t/p/w500";
+  const imageURL = "https://image.tmdb.org/t/p/w1280";
 
   useEffect(() => {
     movieDatabase
@@ -22,6 +22,7 @@ function SingleMovie2() {
         console.log(error);
       });
   }, []);
+
   return (
     <div className="single-container">
       <div className="background-container">
@@ -30,9 +31,9 @@ function SingleMovie2() {
           alt={singleMovie.title}
           className="background-pic"
         />
+        <h3 className="title">{singleMovie.title}</h3>
       </div>
       <div className="movie-info-container">
-        <h3>{singleMovie.title}</h3>
         {genre.map((el) => {
           return (
             <ul key={el.id}>
