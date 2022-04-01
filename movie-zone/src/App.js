@@ -14,12 +14,12 @@ function App() {
     <Router>
       <div className="App">
         <HeaderBar />
-        <SingleMovie2 />
+        {/* <SingleMovie2 /> */}
 
-        {/* <Switch>
+        <Switch>
           <Route exact path="/" component={SearchBar} />
           <Route exact path="/singleMovie" component={SingleMovie} />
-        </Switch> */}
+        </Switch>
       </div>
     </Router>
   );
