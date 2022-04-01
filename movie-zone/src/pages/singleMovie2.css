@@ -1,6 +1,3 @@
-.single-container {
-}
-
 .background-container {
   margin: 0 10px 50px 10px;
   position: relative;
@@ -23,7 +20,6 @@
 }
 
 .movie-info-container {
-  /* background-color: blueviolet; */
   margin: 5px;
   padding: 5px;
 }

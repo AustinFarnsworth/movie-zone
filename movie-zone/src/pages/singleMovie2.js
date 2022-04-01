@@ -34,13 +34,17 @@ function SingleMovie2() {
         <h3 className="title">{singleMovie.title}</h3>
       </div>
       <div className="movie-info-container">
-        {genre.map((el) => {
-          return (
-            <ul key={el.id}>
-              <li>{el.name}</li>
-            </ul>
-          );
-        })}
+        <div className="genre-container">
+          {genre.map((el) => {
+            return (
+              <ul key={el.id}>
+                <li>{el.name}</li>
+              </ul>
+            );
+          })}
+        </div>
+
+        <p>{singleMovie.overview}</p>
       </div>
     </div>
   );
