@@ -12,7 +12,9 @@ function SingleMovie2() {
 
   useEffect(() => {
     movieDatabase
-      .get("/movie/284053")
+      // .get("/movie/284052")
+      // .get("/movie/100402")
+      .get("/movie/324857")
       .then((response) => {
         setSingleMovie(response.data);
         setGenre(response.data.genres);
@@ -31,19 +33,27 @@ function SingleMovie2() {
           alt={singleMovie.title}
           className="background-pic"
         />
-        <h3 className="title">{singleMovie.title}</h3>
+        <div className="title-container">
+          <h3>{singleMovie.title}</h3>
+
+          <div className="title-container-secondary">
+            <p>{singleMovie.release_date}</p>
+            <div className="genre-container">
+              {genre.map((el) => {
+                return (
+                  <ul key={el.id}>
+                    <li>{el.name}</li>
+                  </ul>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </div>
       <div className="movie-info-container">
-        <div className="genre-container">
-          {genre.map((el) => {
-            return (
-              <ul key={el.id}>
-                <li>{el.name}</li>
-              </ul>
-            );
-          })}
-        </div>
-
+        <h5>{singleMovie.tagline}</h5>
+        <p>{singleMovie.runtime} mins</p>
+        <h5> - Summary - </h5>
         <p>{singleMovie.overview}</p>
       </div>
     </div>
