@@ -3,6 +3,7 @@ import {useEffect} from "react";
 import "./singleMovie2.css";
 import movieDatabase from "../api/movieDatabase";
 import {useState} from "react";
+import SingleMovie from "./singleMovie";
 
 function SingleMovie2() {
   const [singleMovie, setSingleMovie] = useState([]);
@@ -24,6 +25,34 @@ function SingleMovie2() {
         console.log(error);
       });
   }, []);
+
+  if (singleMovie.backdrop_path === null) {
+    return (
+      <div className="no-image-container">
+        <h3>{singleMovie.title}</h3>
+        <p> - movie poster not available -</p>
+        <div className="title-container-secondary">
+          <p>{singleMovie.release_date}</p>
+          <div className="genre-container">
+            {genre.map((el) => {
+              return (
+                <ul key={el.id}>
+                  <li>{el.name}</li>
+                </ul>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="movie-info-container2">
+          <h5>{singleMovie.tagline}</h5>
+          <p>{singleMovie.runtime} mins</p>
+          <h5> - Summary - </h5>
+          <p>{singleMovie.overview}</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="single-container">
@@ -50,6 +79,7 @@ function SingleMovie2() {
           </div>
         </div>
       </div>
+
       <div className="movie-info-container">
         <h5>{singleMovie.tagline}</h5>
         <p>{singleMovie.runtime} mins</p>
