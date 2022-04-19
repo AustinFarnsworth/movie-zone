@@ -9,6 +9,7 @@ function HeaderBar() {
 
   function handleTerm(e) {
     e.preventDefault();
+    // this is a test
 
     setTerm(id);
   }
