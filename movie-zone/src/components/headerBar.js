@@ -9,7 +9,7 @@ function HeaderBar() {
 
   function handleTerm(e) {
     e.preventDefault();
-    // this is a test
+    // this is a test to deploy to heroku
 
     setTerm(id);
   }
