@@ -27,7 +27,7 @@ function SearchBar() {
       })
       .then((response) => {
         setMovies(response.data.results);
-        setImage(response.data.results.poster_path);
+
         console.log(response.data.results);
       })
       .catch((error) => {
