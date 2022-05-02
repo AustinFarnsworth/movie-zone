@@ -22,7 +22,7 @@
   "scripts": {
     "start": "cd movie-zone && npm run start",
     "dev": "cd movie-zone && npm run start",
-    "build": "cd movie-zone && npm run start && react-scripts build",
+    "build": "cd movie-zone && npm install && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
