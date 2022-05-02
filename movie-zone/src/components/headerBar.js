@@ -9,11 +9,11 @@ function HeaderBar() {
 
   function handleTerm(e) {
     e.preventDefault();
-    // this is a test to deploy to heroku
+    // this is a test for heroku
 
     setTerm(id);
   }
-  // console.log(term);
+
   console.log(id);
 
   return (
