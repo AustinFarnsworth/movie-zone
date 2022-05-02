@@ -8,7 +8,7 @@ import {useSelector} from "react-redux";
 function SearchBar() {
   const [term, setTerm] = useState("");
   const [movies, setMovies] = useState([]);
-  const [image, setImage] = useState([]);
+  // const [image, setImage] = useState([]);
 
   const id = useSelector((state) => state.checkMovieId);
 

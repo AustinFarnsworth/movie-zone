@@ -1,20 +1,16 @@
 import React from "react";
 import "./headerBar.css";
 import {useSelector} from "react-redux";
-import {useState} from "react";
 
 function HeaderBar() {
-  const [term, setTerm] = useState("");
   const id = useSelector((state) => state.checkMovieId);
 
-  function handleTerm(e) {
-    e.preventDefault();
-    // this is a test for heroku
+  // function handleTerm(e) {
+  //   e.preventDefault();
+  //   // this is a test for heroku
 
-    setTerm(id);
-  }
-
-  console.log(id);
+  //   setTerm(id);
+  // }
 
   return (
     <div className="header-container">

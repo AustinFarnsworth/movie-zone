@@ -3,7 +3,7 @@ import {useEffect} from "react";
 import "./singleMovie2.css";
 import movieDatabase from "../api/movieDatabase";
 import {useState} from "react";
-import SingleMovie from "./singleMovie";
+// import SingleMovie from "./singleMovie";
 
 function SingleMovie2() {
   const [singleMovie, setSingleMovie] = useState([]);
