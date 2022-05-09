@@ -1,7 +1,12 @@
 import "./App.css";
 
 import React from "react";
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import HeaderBar from "./components/headerBar";
 import SearchBar from "./components/searchBar";
 import SingleMovie from "./pages/singleMovie";
@@ -19,6 +24,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={SearchBar} />
           <Route exact path="/singleMovie" component={SingleMovie} />
+          <Redirect to={"/"} />
         </Switch>
       </div>
     </Router>
