@@ -1,7 +1,12 @@
 import "./App.css";
-
+import {MovieContextProvider} from "./context/movieContext";
 import React from "react";
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import HeaderBar from "./components/headerBar";
 import SearchBar from "./components/searchBar";
 import SingleMovie from "./pages/singleMovie";
@@ -11,17 +16,20 @@ import SingleMovie from "./pages/singleMovie";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <HeaderBar />
-        {/* <SingleMovie2 /> */}
+    <MovieContextProvider>
+      <Router>
+        <div className="App">
+          <HeaderBar />
+          {/* <SingleMovie2 /> */}
 
-        <Switch>
-          <Route exact path="/" component={SearchBar} />
-          <Route exact path="/singleMovie" component={SingleMovie} />
-        </Switch>
-      </div>
-    </Router>
+          <Switch>
+            <Route exact path="/" component={SearchBar} />
+            <Route exact path="/singleMovie" component={SingleMovie} />
+            <Redirect to={"/"} />
+          </Switch>
+        </div>
+      </Router>
+    </MovieContextProvider>
   );
 }
 
