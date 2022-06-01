@@ -4,11 +4,14 @@ import {useState} from "react";
 import movieDatabase from "../api/movieDatabase";
 import {useHistory} from "react-router";
 import {useSelector} from "react-redux";
+import {MovieContext} from "../context/movieContext";
+import {useContext} from "react";
 
 function SearchBar() {
   const [term, setTerm] = useState("");
   const [movies, setMovies] = useState([]);
   // const [image, setImage] = useState([]);
+  const {movieID, setMovieID} = useContext(MovieContext);
 
   const id = useSelector((state) => state.checkMovieId);
 
@@ -27,11 +30,13 @@ function SearchBar() {
       })
       .then((response) => {
         setMovies(response.data.results);
+        setMovieID(response.data.results);
       })
       .catch((error) => {
         console.log(error);
       });
   };
+  console.log(movies);
 
   const handleReadMore = async () => {
     history.push("/singleMovie");
