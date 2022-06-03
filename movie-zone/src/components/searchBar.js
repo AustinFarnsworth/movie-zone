@@ -36,9 +36,9 @@ function SearchBar() {
         console.log(error);
       });
   };
-  console.log(movies);
+  console.log(movieID);
 
-  const handleReadMore = async () => {
+  const handleReadMore = async (id) => {
     history.push("/singleMovie");
   };
 
@@ -54,15 +54,16 @@ function SearchBar() {
           }}
         ></input>
       </form>
-      <p>{id}</p>
 
       <div className="movies-list">
-        {movies.map((el) => {
+        {movieID.map((el) => {
           if (el.poster_path === null) {
             return (
               <div className="movie-card">
                 <div key={el.id} className="no-image">
-                  <i class="fa-solid fa-image-slash">- Image Not availabe -</i>
+                  <i className="fa-solid fa-image-slash">
+                    - Image Not availabe -
+                  </i>
                   <p>{el.title}</p>
                 </div>
               </div>

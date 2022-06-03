@@ -6,6 +6,9 @@ import {useContext} from "react";
 
 function SingleMovie() {
   const {item} = useContext(MovieContext);
+  const {movieID} = useContext(MovieContext);
+
+  console.log(movieID);
 
   return (
     <div className="single-movie-page">
@@ -15,7 +18,7 @@ function SingleMovie() {
           Home
         </Link>
       </div>
-      <div>{item}</div>
+      <div>{movieID.id}</div>
     </div>
   );
 }

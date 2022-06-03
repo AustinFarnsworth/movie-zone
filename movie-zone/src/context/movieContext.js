@@ -14,8 +14,10 @@ export const MovieContextProvider = (props) => {
     <MovieContext.Provider
       value={{
         movieID: movieID,
+        setMovieID,
+        setMovieID,
         addMovieId,
-        item: 12,
+        item: 13,
       }}
     >
       {props.children}
