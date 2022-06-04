@@ -17,7 +17,7 @@ function SearchBar() {
 
   const imageURL = "https://image.tmdb.org/t/p/w500";
 
-  const history = useHistory();
+  let history = useHistory();
 
   const onSearchTerm = (e) => {
     e.preventDefault();
@@ -31,15 +31,15 @@ function SearchBar() {
       .then((response) => {
         setMovies(response.data.results);
         setMovieID(response.data.results);
+        console.log(response.data.results);
       })
       .catch((error) => {
         console.log(error);
       });
   };
-  console.log(movieID);
 
   const handleReadMore = async (id) => {
-    history.push("/singleMovie");
+    history.push(`singleMovie/${id}`);
   };
 
   return (
@@ -57,6 +57,9 @@ function SearchBar() {
 
       <div className="movies-list">
         {movieID.map((el) => {
+          movieID.sort(function (a, b) {
+            return b.id - a.id;
+          });
           if (el.poster_path === null) {
             return (
               <div className="movie-card">
@@ -87,7 +90,7 @@ function SearchBar() {
 
                   <button
                     className="more-button"
-                    onClick={() => handleReadMore()}
+                    onClick={() => handleReadMore(el.id)}
                   >
                     More Info
                   </button>

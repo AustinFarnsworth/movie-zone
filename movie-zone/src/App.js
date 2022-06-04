@@ -10,7 +10,7 @@ import {
 import HeaderBar from "./components/headerBar";
 import SearchBar from "./components/searchBar";
 import SingleMovie from "./pages/singleMovie";
-// import SingleMovie2 from "./pages/singleMovie2";
+import SingleMovie2 from "./pages/singleMovie2";
 
 // import {useSelector} from "react-redux";
 
@@ -24,7 +24,7 @@ function App() {
 
           <Switch>
             <Route exact path="/" component={SearchBar} />
-            <Route exact path="/singleMovie" component={SingleMovie} />
+            <Route exact path="/singleMovie/:id" component={SingleMovie2} />
             <Redirect to={"/"} />
           </Switch>
         </div>
