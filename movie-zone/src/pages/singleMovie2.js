@@ -6,6 +6,7 @@ import {useState} from "react";
 import {MovieContext} from "../context/movieContext";
 import {useContext} from "react";
 import {useParams} from "react-router";
+import {Link} from "react-router-dom";
 
 function SingleMovie2() {
   const [singleMovie, setSingleMovie] = useState([]);
@@ -17,7 +18,8 @@ function SingleMovie2() {
 
   useEffect(() => {
     movieDatabase
-      .get("/movie/284052")
+      .get(`/movie/${id}`)
+      // .get("/movie/284052")
       // .get("/movie/100402")
 
       .then((response) => {
@@ -29,8 +31,6 @@ function SingleMovie2() {
       });
   }, []);
 
-  console.log(`this is the movie id ${id}`);
-
   if (singleMovie.backdrop_path === null) {
     return (
       <div className="no-image-container">
@@ -38,7 +38,7 @@ function SingleMovie2() {
         <p> - movie poster not available -</p>
         <div className="title-container-secondary">
           <p>{singleMovie.release_date}</p>
-          <div className="genre-container">
+          <div className="genre-container2">
             {genre.map((el) => {
               return (
                 <ul key={el.id}>
@@ -54,6 +54,16 @@ function SingleMovie2() {
           <p>{singleMovie.runtime} mins</p>
           <h5> - Summary - </h5>
           <p>{singleMovie.overview}</p>
+        </div>
+
+        <div className="button-container2">
+          <Link to="/" className="link">
+            Back to Movie List
+          </Link>
+        </div>
+
+        <div className="coming-soon-container">
+          <h1>- Movie Suggestions Coming Soon -</h1>
         </div>
       </div>
     );
@@ -86,11 +96,20 @@ function SingleMovie2() {
       </div>
 
       <div className="movie-info-container">
-        <h3>{id}</h3>
         <h5>{singleMovie.tagline}</h5>
         <p>{singleMovie.runtime} mins</p>
         <h5> - Summary - </h5>
         <p>{singleMovie.overview}</p>
+      </div>
+
+      <div className="button-container">
+        <Link to="/" className="link">
+          Back to Movie List
+        </Link>
+      </div>
+
+      <div className="coming-soon-container">
+        <h1>- Movie Suggestions Coming Soon -</h1>
       </div>
     </div>
   );

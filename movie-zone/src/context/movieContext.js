@@ -8,7 +8,7 @@ export const MovieContextProvider = (props) => {
   const [movieID, setMovieID] = useState([]);
 
   const addMovieId = (id) => {
-    setMovieID(id);
+    setMovieID({...id, id});
   };
   return (
     <MovieContext.Provider

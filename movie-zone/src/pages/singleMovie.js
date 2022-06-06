@@ -27,7 +27,6 @@ function SingleMovie() {
 
   return (
     <div className="single-movie-page">
-      <h1>- Movie Info Page Coming Soon -</h1>
       <div className="link-container">
         <Link to="/" className="link">
           Home
