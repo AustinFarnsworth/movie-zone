@@ -4,17 +4,20 @@ import {useState} from "react";
 import movieDatabase from "../api/movieDatabase";
 import {useHistory} from "react-router";
 import {useSelector} from "react-redux";
+import {MovieContext} from "../context/movieContext";
+import {useContext} from "react";
 
 function SearchBar() {
   const [term, setTerm] = useState("");
   const [movies, setMovies] = useState([]);
   // const [image, setImage] = useState([]);
+  const {movieID, setMovieID} = useContext(MovieContext);
 
   const id = useSelector((state) => state.checkMovieId);
 
   const imageURL = "https://image.tmdb.org/t/p/w500";
 
-  const history = useHistory();
+  let history = useHistory();
 
   const onSearchTerm = (e) => {
     e.preventDefault();
@@ -27,14 +30,16 @@ function SearchBar() {
       })
       .then((response) => {
         setMovies(response.data.results);
+        setMovieID(response.data.results);
+        console.log(response.data.results);
       })
       .catch((error) => {
         console.log(error);
       });
   };
 
-  const handleReadMore = async () => {
-    history.push("/singleMovie");
+  const handleReadMore = async (id) => {
+    history.push(`singleMovie/${id}`);
   };
 
   return (
@@ -49,15 +54,19 @@ function SearchBar() {
           }}
         ></input>
       </form>
-      <p>{id}</p>
 
       <div className="movies-list">
-        {movies.map((el) => {
+        {movieID.map((el) => {
+          movieID.sort(function (a, b) {
+            return b.id - a.id;
+          });
           if (el.poster_path === null) {
             return (
               <div className="movie-card">
                 <div key={el.id} className="no-image">
-                  <i class="fa-solid fa-image-slash">- Image Not availabe -</i>
+                  <i className="fa-solid fa-image-slash">
+                    - Image Not availabe -
+                  </i>
                   <p>{el.title}</p>
                 </div>
               </div>
@@ -81,7 +90,7 @@ function SearchBar() {
 
                   <button
                     className="more-button"
-                    onClick={() => handleReadMore()}
+                    onClick={() => handleReadMore(el.id)}
                   >
                     More Info
                   </button>

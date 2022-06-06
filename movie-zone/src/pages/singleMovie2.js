@@ -3,23 +3,28 @@ import {useEffect} from "react";
 import "./singleMovie2.css";
 import movieDatabase from "../api/movieDatabase";
 import {useState} from "react";
-// import SingleMovie from "./singleMovie";
+import {MovieContext} from "../context/movieContext";
+import {useContext} from "react";
+import {useParams} from "react-router";
+import {Link} from "react-router-dom";
 
 function SingleMovie2() {
   const [singleMovie, setSingleMovie] = useState([]);
   const [genre, setGenre] = useState([]);
+  const {movieID} = useContext(MovieContext);
+  const {id} = useParams();
 
   const imageURL = "https://image.tmdb.org/t/p/w1280";
 
   useEffect(() => {
     movieDatabase
+      .get(`/movie/${id}`)
       // .get("/movie/284052")
       // .get("/movie/100402")
-      .get("/movie/324857")
+
       .then((response) => {
         setSingleMovie(response.data);
         setGenre(response.data.genres);
-        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -33,7 +38,7 @@ function SingleMovie2() {
         <p> - movie poster not available -</p>
         <div className="title-container-secondary">
           <p>{singleMovie.release_date}</p>
-          <div className="genre-container">
+          <div className="genre-container2">
             {genre.map((el) => {
               return (
                 <ul key={el.id}>
@@ -49,6 +54,16 @@ function SingleMovie2() {
           <p>{singleMovie.runtime} mins</p>
           <h5> - Summary - </h5>
           <p>{singleMovie.overview}</p>
+        </div>
+
+        <div className="button-container2">
+          <Link to="/" className="link">
+            Back to Movie List
+          </Link>
+        </div>
+
+        <div className="coming-soon-container">
+          <h1>- Movie Suggestions Coming Soon -</h1>
         </div>
       </div>
     );
@@ -85,6 +100,16 @@ function SingleMovie2() {
         <p>{singleMovie.runtime} mins</p>
         <h5> - Summary - </h5>
         <p>{singleMovie.overview}</p>
+      </div>
+
+      <div className="button-container">
+        <Link to="/" className="link">
+          Back to Movie List
+        </Link>
+      </div>
+
+      <div className="coming-soon-container">
+        <h1>- Movie Suggestions Coming Soon -</h1>
       </div>
     </div>
   );

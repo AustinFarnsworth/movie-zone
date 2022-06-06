@@ -11,6 +11,17 @@
   margin-bottom: 10px;
 }
 
+.genre-container2 {
+  margin: 1%;
+}
+
+.genre-container2 ul {
+  list-style: none;
+}
+
+.movie-info-container2 {
+  margin: 1%;
+}
 /* Background Image CSS */
 
 .single-container {
@@ -94,6 +105,15 @@
 .movie-info-container h5 {
   margin-bottom: 5px;
   font-weight: 500;
+}
+
+.button-container {
+  margin-left: 7%;
+}
+
+.coming-soon-container {
+  margin: 1% 5% 3% 5%;
+  text-align: center;
 }
 
 @media screen and (min-width: 320px) and (max-width: 740px) {
