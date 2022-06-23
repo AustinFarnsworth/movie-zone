@@ -10,7 +10,7 @@ import {
 import HeaderBar from "./components/headerBar";
 import SearchBar from "./components/searchBar";
 import SingleMovie from "./pages/singleMovie";
-import NowPlaying from "./pages/nowPlaying";
+import NowPlaying from "./components/nowPlaying";
 
 // import {useSelector} from "react-redux";
 
