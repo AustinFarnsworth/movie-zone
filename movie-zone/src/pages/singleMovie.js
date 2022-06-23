@@ -7,6 +7,7 @@ import {MovieContext} from "../context/movieContext";
 import {useContext} from "react";
 import {useParams} from "react-router";
 import {Link} from "react-router-dom";
+import MovieRecommendations from "../components/recommendations";
 
 function SingleMovie() {
   const [singleMovie, setSingleMovie] = useState([]);
@@ -63,6 +64,7 @@ function SingleMovie() {
 
         <div className="coming-soon-container">
           <h1>- Movie Suggestions Coming Soon -</h1>
+          <MovieRecommendations />
         </div>
       </div>
     );
@@ -109,6 +111,7 @@ function SingleMovie() {
 
       <div className="coming-soon-container">
         <h1>- Movie Suggestions Coming Soon -</h1>
+        <MovieRecommendations />
       </div>
     </div>
   );

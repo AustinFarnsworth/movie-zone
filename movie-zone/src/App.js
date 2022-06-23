@@ -10,6 +10,7 @@ import {
 import HeaderBar from "./components/headerBar";
 import SearchBar from "./components/searchBar";
 import SingleMovie from "./pages/singleMovie";
+import NowPlaying from "./pages/nowPlaying";
 
 // import {useSelector} from "react-redux";
 
@@ -25,6 +26,8 @@ function App() {
             <Route exact path="/singleMovie/:id" component={SingleMovie} />
             <Redirect to={"/"} />
           </Switch>
+
+          <NowPlaying />
         </div>
       </Router>
     </MovieContextProvider>
