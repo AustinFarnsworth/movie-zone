@@ -22,3 +22,24 @@
   background-size: cover;
   border-radius: 15px;
 }
+
+/* slideshow */
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.slides {
+  display: none;
+}
+
+.previous .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 5px;
+  color: white;
+}

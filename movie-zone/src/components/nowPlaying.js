@@ -21,6 +21,14 @@ function NowPlaying() {
       });
   }, []);
 
+  function nextSlides() {
+    console.log("next");
+  }
+
+  function previousSlides() {
+    console.log("previous");
+  }
+
   return (
     <div className="now-playing-container">
       <h3>Movies Now Playing</h3>
@@ -31,14 +39,29 @@ function NowPlaying() {
             return b.id - a.id;
           });
           return (
-            <div className="top-container">
-              <div className="now-playing-card">
+            // <div className="top-container">
+            //   <div className="now-playing-card">
+            //     <img
+            //       src={imageURL + movie.poster_path}
+            //       alt={movie.title}
+            //       className="image"
+            //     />
+            //   </div>
+            // </div>
+
+            <div className="slideshow-container">
+              <div className="slides fade">
                 <img
                   src={imageURL + movie.poster_path}
                   alt={movie.title}
                   className="image"
                 />
               </div>
+
+              <a className="previous" onClick={nextSlides}>
+                &#10094;
+              </a>
+              <a className="next" onClick={previousSlides}></a>
             </div>
           );
         })}
