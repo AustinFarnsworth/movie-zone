@@ -27,7 +27,7 @@ function App() {
             <Redirect to={"/"} />
           </Switch>
 
-          <NowPlaying />
+          {/* <NowPlaying /> */}
         </div>
       </Router>
     </MovieContextProvider>

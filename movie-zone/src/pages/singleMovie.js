@@ -57,7 +57,7 @@ function SingleMovie() {
         </div>
 
         <div className="button-container2">
-          <Link to="/" className="link">
+          <Link to="/" className="button">
             Back to Movie List
           </Link>
         </div>
@@ -104,7 +104,7 @@ function SingleMovie() {
       </div>
 
       <div className="button-container">
-        <Link to="/" className="link">
+        <Link to="/" className="button">
           Back to Movie List
         </Link>
       </div>
