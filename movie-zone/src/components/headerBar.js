@@ -17,7 +17,7 @@ function HeaderBar() {
       <h2 className="one">Welcome to The Movie Zone</h2>
 
       <div className="three">
-        <Link to="/" className="link">
+        <Link to="/" className="button">
           Home
         </Link>
       </div>

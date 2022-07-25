@@ -36,6 +36,10 @@ form input {
   margin-top: 8px;
 }
 
+form button {
+  margin-left: 25px;
+}
+
 .no-image {
   padding: 8px 15px;
 }

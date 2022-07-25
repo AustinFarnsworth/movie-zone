@@ -46,13 +46,20 @@ function SearchBar() {
     <div className="search-bar-container">
       <form onSubmit={onSearchTerm}>
         <label className="label">Search Your Favorite Movie Titles here</label>
-        <input
-          type="text"
-          value={term}
-          onChange={(e) => {
-            setTerm(e.target.value);
-          }}
-        ></input>
+
+        <div>
+          <input
+            type="text"
+            className="input-field"
+            value={term}
+            onChange={(e) => {
+              setTerm(e.target.value);
+            }}
+          ></input>
+          <button onClick={onSearchTerm} className="button">
+            Search
+          </button>
+        </div>
       </form>
 
       <div className="movies-list">

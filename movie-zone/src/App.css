@@ -12,10 +12,21 @@ body {
 
 h1,
 h2,
-h {
+h3 {
   font-family: "Shadows Into Light", cursive;
 }
 
 label {
   font-family: "Shadows Into Light", cursive;
+}
+
+.button {
+  color: #fff;
+  text-decoration: none;
+  background: #395756;
+  padding: 10px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
 }
