@@ -31,6 +31,8 @@ function SingleMovie() {
       });
   }, []);
 
+  console.log(id);
+
   if (singleMovie.backdrop_path === null) {
     return (
       <div className="no-image-container">
