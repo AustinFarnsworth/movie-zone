@@ -1,3 +1,19 @@
 .title {
   color: blue;
 }
+
+.rec-image-container {
+  margin: 2%;
+  padding: 1%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.rec-movies-list {
+  margin: 5px;
+  padding: 5px;
+}
+
+.rec-movies-list img {
+  border-radius: 5%;
+}
