@@ -42,6 +42,8 @@ function SearchBar() {
     history.push(`singleMovie/${id}`);
   };
 
+  
+
   return (
     <div className="search-bar-container">
       <form onSubmit={onSearchTerm}>
