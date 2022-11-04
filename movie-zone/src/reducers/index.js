@@ -1,11 +1,11 @@
 import movieId from "./movieId";
 import otherReducer from "./otherReducer";
-import {reducer as formReducer} from "redux-form";
+// import {reducer as formReducer} from "redux-form";
 import {combineReducers} from "redux";
 
 const allReducers = combineReducers({
   checkMovieId: movieId,
-  form: formReducer,
+  // form: formReducer,
   other: otherReducer,
 });
 
