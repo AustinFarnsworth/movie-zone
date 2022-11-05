@@ -1,9 +1,8 @@
 {
+  "homepage": "https://AustinFarnsworth.github.io/movie-zone",
   "name": "movie-zone",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://AustinFarnsworth.github.io/movie-zone",
-  "deploy": "gh-pages -b main -d build",
   "engines": {
     "node": "16.16.0",
     "npm": "8.11.0"
@@ -27,9 +26,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "cd movie-zone && npm run start",
     "dev": "cd movie-zone && npm run start",
-    "build": "cd movie-zone && npm install && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
