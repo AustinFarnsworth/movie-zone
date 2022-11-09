@@ -1,7 +1,7 @@
 {
-  "homepage": " https://austinfarnsworth.github.io/movie-zone/",
   "name": "movie-zone",
   "version": "0.1.0",
+  "homepage": " https://austinfarnsworth.github.io/movie-zone/",
   "private": true,
   "engines": {
     "node": "16.16.0",
@@ -26,8 +26,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "cd movie-zone & npm run build",
+    "deploy": " cd movie-zone & gh-pages -d build",
     "start": "cd movie-zone && npm run start",
     "dev": "cd movie-zone && npm run start",
     "build": "react-scripts build",
@@ -57,8 +57,6 @@
     "c/**/left-pad": "^1.1.2"
   },
   "devDependencies": {
-    "dotenv-webpack": "^8.0.1",
-    "eslint-config-react-app": "^7.0.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1"
+    "dotenv-webpack": "^8.0.1"
   }
 }
