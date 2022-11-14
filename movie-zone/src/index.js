@@ -18,6 +18,12 @@ const store = createStore(allReducers, composeEnhancers(applyMiddleware()));
 
 // DISPATCH
 
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+
 ReactDOM.render(
   <Provider store={store}>
     <App />
