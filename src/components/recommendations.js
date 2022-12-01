@@ -24,7 +24,7 @@ function MovieRecommendations() {
 
   return (
     <div>
-      <h1 className="title">Movie Recs</h1>
+      <h1 className="title">Movie Recommendations</h1>
 
       <div className="rec-image-container">
         {movieTitle.map((rec) => {
