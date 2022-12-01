@@ -1,0 +1,18 @@
+import axios from "axios";
+require("dotenv").config();
+
+const KEY = process.env.REACT_APP_API_KEY;
+let test = process.env.test;
+
+// api reference found at https://www.themoviedb.org/documentation/api?language=en-US
+
+export default axios.create({
+  baseURL: "https://api.themoviedb.org/3",
+  params: {
+    api_key: KEY,
+    include_adult: false,
+  },
+});
+
+console.log(KEY);
+console.log(test);

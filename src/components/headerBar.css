@@ -1,0 +1,25 @@
+.header-container {
+  max-width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  background-color: #4f5d75;
+  color: #edeef1;
+  box-shadow: -4px 7px 9px 1px rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: -4px 7px 9px 1px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: -4px 7px 9px 1px rgba(0, 0, 0, 0.18);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.one {
+  grid-column: 1/3;
+  margin-left: 5%;
+  font-size: 28px;
+}
+
+.three {
+  grid-column: 3/3;
+  margin-right: 5%;
+  margin-left: 55%;
+}

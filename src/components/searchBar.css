@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+.search-bar-container {
+  margin: 10px 50px;
+}
+
+.search-bar-container label {
+  margin-right: 10px;
+}
+
+.movies-list ul {
+  list-style: none;
+}
+
+.label {
+  font-size: 28px;
+}
+
+.movies-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 5px;
+  padding: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  width: 30%;
+  padding: 5px;
+  margin-top: 8px;
+}
+
+form button {
+  margin-left: 25px;
+}
+
+.no-image {
+  padding: 8px 15px;
+}
+
+.no-image p {
+  margin-top: 8px;
+}
+
+.movie-card {
+  margin: 50px auto;
+  font-family: "Lato", Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 520px;
+  background: #fff;
+
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgb(90, 89, 89);
+}
+
+.poster {
+  width: 100%;
+  height: 360px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 0 13px 13px;
+}
+
+.movie-overview {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.bottom-card-container {
+  padding: 7px;
+  color: #374151;
+}
+
+.bottom-card-container h3,
+h5 {
+  margin-bottom: 5px;
+}
+
+.more-button {
+  padding: 4px 10px;
+  border-radius: 20%;
+  border-style: none;
+  background-color: #4f5d75;
+  color: #edeef1;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  bottom: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.more-button:hover {
+  opacity: 0.8;
+}
