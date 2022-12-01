@@ -63,7 +63,6 @@ function SingleMovie() {
         </div>
 
         <div className="coming-soon-container">
-          <h1>- Movie Suggestions Coming Soon -</h1>
           <MovieRecommendations />
         </div>
       </div>
