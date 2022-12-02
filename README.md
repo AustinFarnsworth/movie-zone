@@ -4,7 +4,7 @@ This is a React app built with create react app that connects to the Movie Datab
 
 ## What is the use of this Repo
 
-This project demonstates the following
+This project is a ReactJS app that deomonstrates the following
 
 - Create React app
 - Communicating between parent and child component
@@ -29,7 +29,7 @@ Install create-react-app npm package globally. This will help to easily run the 
   npm install -g create-react-app
 ```
 
-## Cloning adn Running in Local
+## Cloning and Running in Local
 
 Clone the project into local
 
